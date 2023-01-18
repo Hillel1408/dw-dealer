@@ -1,0 +1,98 @@
+.worth {
+  &__container {
+    display: flex;
+    background-color: #f4f4f4;
+  }
+  &__text {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__item {
+    &:first-child {
+      box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      img {
+        margin-right: 100px;
+      }
+      @media (max-width: 928px) {
+        display: none;
+      }
+    }
+    &:last-child {
+      background: #252525;
+      width: 50%;
+      height: 734px;
+      position: relative;
+      top: 53px;
+      & > .worth__item-block {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        left: -560px;
+        position: relative;
+        background: url("../images/bg-2.png") no-repeat;
+        position: relative;
+        @media (max-width: 1140px) {
+          left: -460px;
+        }
+        @media (max-width: 928px) {
+          display: none;
+        }
+      }
+      &:after {
+        content: url("../images/bg-4.png");
+        position: absolute;
+        right: 0;
+        top: -53px;
+        @media (max-width: 928px) {
+          display: none;
+        }
+      }
+      @media (max-width: 928px) {
+        width: 100%;
+      }
+    }
+  }
+  &__list {
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    left: -350px;
+    &-item {
+      max-width: 664px;
+      display: flex;
+      span {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+        color: white;
+        margin-bottom: 10px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 87px;
+      }
+      &:first-child {
+        margin-left: 218px;
+        &:before {
+          content: url("../images/icon.svg");
+          margin-right: 40px;
+        }
+      }
+      &:nth-child(2) {
+        margin-left: 112px;
+        &:before {
+          content: url("../images/icon-2.svg");
+          margin-right: 40px;
+        }
+      }
+      &:last-child {
+        &:before {
+          content: url("../images/icon-3.svg");
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
