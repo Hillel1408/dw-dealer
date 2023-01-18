@@ -1,0 +1,34 @@
+.footer {
+  padding: 78px 0 86px 0;
+  background-color: $secondaryColor;
+  &__container {
+    display: grid;
+    gap: calc(107 / $maxWidthContainer * 100%);
+    grid-template-columns:
+      calc(342 / $maxWidthContainer * 100%) calc(
+        331 / $maxWidthContainer * 100%
+      )
+      calc(533 / $maxWidthContainer * 100%);
+  }
+  &__logo {
+    margin-bottom: 16px;
+  }
+  &__copyright {
+    text-transform: uppercase;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    margin-bottom: 16px;
+    display: block;
+  }
+  &__text {
+    font-family: "Ubuntu", sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    line-height: 17px;
+  }
+  &__title {
+  }
+}

@@ -1,0 +1,14 @@
+section.questions
+    .container.questions__container
+        .questions__item
+            h2.questions__title Остались вопросы?
+            p.text.questions__text Также вы можете напрямую связаться с нами или с уже действующими партнерами, чтобы задать все вопросы
+        .questions__item
+            form(action="#")
+                input(placeholder="Ваше имя" name="name" required).questions__input 
+                input(placeholder="Ваш телефон" name="telephone" type="tel" required).questions__input
+                button.btn.questions__btn Получить контакты действующих партнеров
+            p.smalltext.questions__smalltext *Нажимая на кнопку, вы даете согласие на обработку персональных данных
+        .questions__item
+            p.text.questions__text Связаться с менеджером сопровождения
+            a.questions__tel(href="tel:+7(913)205-06-13") +7 (913) 205-06-13
