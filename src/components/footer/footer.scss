@@ -3,12 +3,10 @@
   background-color: $secondaryColor;
   &__container {
     display: grid;
-    gap: calc(107 / $maxWidthContainer * 100%);
+    gap: calc(107 / 1420 * 100%);
     grid-template-columns:
-      calc(342 / $maxWidthContainer * 100%) calc(
-        340 / $maxWidthContainer * 100%
-      )
-      calc(524 / $maxWidthContainer * 100%);
+      calc(342 / 1420 * 100%) calc(340 / 1420 * 100%)
+      calc(524 / 1420 * 100%);
     @media (max-width: ($md2 + px)) {
       gap: 40px;
       grid-template-columns: 1fr 1fr;
@@ -35,7 +33,7 @@
     font-family: "Ubuntu", sans-serif;
     color: rgba(255, 255, 255, 0.5);
     font-size: 15px;
-    line-height: 17px;
+    line-height: calc(17 / 15 * 100%);
   }
   &__link {
     font-family: "Ubuntu", sans-serif;

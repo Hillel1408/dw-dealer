@@ -3,12 +3,10 @@
   background-color: #f4f4f4;
   &__container {
     display: grid;
-    gap: calc(60 / $maxWidthContainer * 100%);
+    gap: calc(60 / 1420 * 100%);
     grid-template-columns:
-      calc(433 / $maxWidthContainer * 100%) calc(
-        498 / $maxWidthContainer * 100%
-      )
-      calc(369 / $maxWidthContainer * 100%);
+      calc(433 / 1420 * 100%) calc(498 / 1420 * 100%)
+      calc(369 / 1420 * 100%);
     @media (max-width: ($md2 + px)) {
       gap: 30px;
       grid-template-columns: 1fr 1fr;

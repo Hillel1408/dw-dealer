@@ -7,14 +7,14 @@
   &__title {
     text-align: center;
     margin-bottom: 50px;
-    @media (max-width: ($md4 + px)) {
-      margin-bottom: 80px;
-    }
     &-title {
       margin-bottom: 10px;
     }
     span {
       color: $mainColor;
+    }
+    @media (max-width: ($md4 + px)) {
+      margin-bottom: 80px;
     }
   }
   &__grid {
@@ -35,26 +35,25 @@
     position: relative;
     &:first-child,
     &:nth-child(2) {
-      &:before {
-        content: '';
+      &:before,
+      &:after {
+        content: "";
         display: block;
+        background-color: rgba(37, 37, 37, 0.3);
+        right: 0;
+        position: absolute;
+      }
+      &:before {
         width: 1px;
         height: 166px;
-        background-color: rgba(37, 37, 37, 0.3);
-        position: absolute;
-        right: 0;
+
         top: 100%;
         transform: translateY(-50%);
       }
       &:after {
-        content: '';
-        display: block;
         width: 166px;
         height: 1px;
-        background-color: rgba(37, 37, 37, 0.3);
-        position: absolute;
         bottom: 0;
-        right: 0;
         transform: translateX(50%);
       }
       @media (max-width: ($maxWidthContainer + px)) {
