@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": [],
-  "sourcesContent": [],
-  "mappings": "",
+  "sources": ["src/components/sections/reviews/reviews.js"],
+  "sourcesContent": ["$(document).ready(function () {\n  $(\".reviews__slider\").slick({\n    dots: false,\n    arrows: false,\n  });\n});\n"],
+  "mappings": ";;AAAA,IAAE,UAAU,MAAM,WAAY;AAC5B,MAAE,oBAAoB,MAAM;AAAA,MAC1B,MAAM;AAAA,MACN,QAAQ;AAAA;AAAA;",
   "names": []
 }

@@ -50,3 +50,11 @@ body.lock {
   font-size: 15px;
   line-height: calc(18 / 15 * 100%);
 }
+.slider .slick {
+  &-list {
+    overflow: hidden;
+  }
+  &-track {
+    display: flex;
+  }
+}
