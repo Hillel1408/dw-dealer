@@ -16,16 +16,22 @@ export default func = (phoneInput, nameInput, btn, popup, succes) => {
 
   async function btnHandler(e) {
     e.preventDefault();
+    const body = {
+      name: nameInput.value,
+      phone: phoneMask.unmaskedValue,
+    };
+    if (btn.dataset.package) body.package = btn.dataset.package;
     try {
       await fetch("send_msg.php", {
         method: "POST",
-        body: { name: nameInput.value, phone: phoneMask.unmaskedValue },
+        body: body,
       });
       popup.style.display = "none";
       succes.style.display = "flex";
       setTimeout(() => {
         popup.style.display = "flex";
         succes.style.display = "none";
+        btn.dataset.package = "";
       }, 3000);
     } catch (err) {
       console.log(err);
