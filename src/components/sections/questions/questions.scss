@@ -16,6 +16,21 @@
       grid-template-columns: 1fr;
     }
   }
+  &__succes {
+    display: none;
+    flex-direction: column;
+    h2 {
+      color: $secondaryColor;
+    }
+    p {
+      color: $secondaryColor;
+    }
+  }
+  &__item {
+    &:nth-child(2) {
+      flex-direction: column;
+    }
+  }
   &__title {
     text-transform: uppercase;
     font-family: "Outfit", sans-serif;

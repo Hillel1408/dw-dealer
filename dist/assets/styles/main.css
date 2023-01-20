@@ -71,10 +71,10 @@ main {
   line-height: 120%;
 }
 
-.slider .slick-list {
+.slick-list {
   overflow: hidden;
 }
-.slider .slick-track {
+.slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -837,6 +837,25 @@ h6 {
     grid-template-columns: 1fr;
   }
 }
+.questions__succes {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.questions__succes h2 {
+  color: #252525;
+}
+.questions__succes p {
+  color: #252525;
+}
+.questions__item:nth-child(2) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .questions__title {
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
@@ -984,15 +1003,8 @@ h6 {
   top: 53px;
 }
 .worth__item:last-child > .worth__item-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 100%;
   left: -560px;
-  position: relative;
   background: url("../images/bg-2.png") no-repeat;
   position: relative;
 }
@@ -1457,7 +1469,7 @@ h6 {
   }
 }
 .reviews__block-video iframe {
-  width: 100%;
+  width: 600px;
   height: 479px;
 }
 @media (max-width: 1024px) {

@@ -13,41 +13,46 @@
     });
   });
 
+  // src/js/func.js
+  var func_default = func = (phoneInput4, nameInput4, btn4, popup4, succes4) => {
+    const phoneMask = new IMask(phoneInput4, {
+      mask: "+{7}(000)000-00-00"
+    });
+    phoneInput4.addEventListener("input", phoneInputHandler);
+    btn4.addEventListener("click", btnHandler);
+    function phoneInputHandler() {
+      if (phoneMask.masked.isComplete) {
+        btn4.classList.add("btn-active");
+      } else {
+        btn4.classList.remove("btn-active");
+      }
+    }
+    async function btnHandler(e) {
+      e.preventDefault();
+      try {
+        await fetch("send_msg.php", {
+          method: "POST",
+          body: { name: nameInput4.value, phone: phoneMask.unmaskedValue }
+        });
+        popup4.style.display = "none";
+        succes4.style.display = "flex";
+        setTimeout(() => {
+          popup4.style.display = "flex";
+          succes4.style.display = "none";
+        }, 3e3);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  };
+
   // src/components/sections/popup/popup.js
   var phoneInput = document.querySelector(".phone");
   var nameInput = document.querySelector(".name");
   var btn = document.querySelector(".btn3");
   var popup = document.querySelector(".popup2");
   var succes = document.querySelector(".succes2");
-  var phoneMask = new IMask(phoneInput, {
-    mask: "+{7}(000)000-00-00"
-  });
-  phoneInput.addEventListener("input", phoneInputHandler);
-  btn.addEventListener("click", btnHandler);
-  function phoneInputHandler() {
-    if (phoneMask.masked.isComplete) {
-      btn.classList.add("btn-active");
-    } else {
-      btn.classList.remove("btn-active");
-    }
-  }
-  async function btnHandler(e) {
-    e.preventDefault();
-    try {
-      await fetch("send_msg.php", {
-        method: "POST",
-        body: { name: nameInput.value, phone: phoneMask.unmaskedValue }
-      });
-      popup.style.display = "none";
-      succes.style.display = "flex";
-      setTimeout(() => {
-        popup.style.display = "flex";
-        succes.style.display = "none";
-      }, 3e3);
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  func_default(phoneInput, nameInput, btn, popup, succes);
 
   // src/components/sections/popup-2/popup-2.js
   var phoneInput2 = document.querySelector(".phone2");
@@ -55,63 +60,15 @@
   var btn2 = document.querySelector(".btn2");
   var popup2 = document.querySelector(".popup3");
   var succes2 = document.querySelector(".succes3");
-  var phoneMask2 = new IMask(phoneInput2, {
-    mask: "+{7}(000)000-00-00"
-  });
-  phoneInput2.addEventListener("input", phoneInputHandler2);
-  btn2.addEventListener("click", btnHandler2);
-  function phoneInputHandler2() {
-    if (phoneMask2.masked.isComplete) {
-      btn2.classList.add("btn-active");
-    } else {
-      btn2.classList.remove("btn-active");
-    }
-  }
-  async function btnHandler2(e) {
-    e.preventDefault();
-    try {
-      await fetch("send_msg.php", {
-        method: "POST",
-        body: { name: nameInput2.value, phone: phoneMask2.unmaskedValue }
-      });
-      popup2.style.display = "none";
-      succes2.style.display = "flex";
-      setTimeout(() => {
-        popup2.style.display = "flex";
-        succes2.style.display = "none";
-      }, 3e3);
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  func_default(phoneInput2, nameInput2, btn2, popup2, succes2);
 
   // src/components/sections/questions/questions.js
   var phoneInput3 = document.querySelector(".phone3");
   var nameInput3 = document.querySelector(".name3");
   var btn3 = document.querySelector(".btn4");
-  var phoneMask3 = new IMask(phoneInput3, {
-    mask: "+{7}(000)000-00-00"
-  });
-  phoneInput3.addEventListener("input", phoneInputHandler3);
-  btn3.addEventListener("click", btnHandler3);
-  function phoneInputHandler3() {
-    if (phoneMask3.masked.isComplete) {
-      btn3.classList.add("btn-active");
-    } else {
-      btn3.classList.remove("btn-active");
-    }
-  }
-  async function btnHandler3(e) {
-    e.preventDefault();
-    try {
-      await fetch("send_msg.php", {
-        method: "POST",
-        body: { name: nameInput3.value, phone: phoneMask3.unmaskedValue }
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  var popup3 = document.querySelector(".popup4");
+  var succes3 = document.querySelector(".succes4");
+  func_default(phoneInput3, nameInput3, btn3, popup3, succes3);
 
   // src/components/index.js
   var popupLinks = document.querySelectorAll(".popup-link");

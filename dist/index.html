@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заголовок страницы</title>
-    <link href="/assets/styles/main.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://unpkg.com/imask"></script>
+    <link href="/assets/styles/main.css" rel="stylesheet"><script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/assets/js/slick.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>-->
+    <!--<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>--><script src="https://unpkg.com/imask"></script>
   </head>
   <body>
     <main>
@@ -217,8 +217,12 @@
           <h2 class="title reviews__title">Выбор <span>партнеров</span></h2>
           <div class="reviews__block">
             <div class="reviews__block-video">
-              <div class="reviews__block-slide"><iframe src="https://www.youtube.com/embed/HM5Sb0yBEU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-              <div class="reviews__block-slide"><iframe src="https://www.youtube.com/embed/HM5Sb0yBEU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+              <div class="reviews__block-slide">
+                <!--<iframe src="https://www.youtube.com/embed/HM5Sb0yBEU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+              </div>
+              <div class="reviews__block-slide">
+                <!--<iframe src="https://www.youtube.com/embed/HM5Sb0yBEU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+              </div>
             </div>
             <div class="reviews__block-content">
               <div class="reviews__slider">
@@ -253,13 +257,17 @@
             <h2 class="questions__title">Остались вопросы?</h2>
             <p class="text questions__text">Также вы можете напрямую связаться с нами или с уже действующими партнерами, чтобы задать все вопросы</p>
           </div>
-          <div class="questions__item">
+          <div class="questions__item popup4">
             <form action="#">
               <input class="questions__input name3" placeholder="Ваше имя" name="name" required>
               <input class="questions__input phone3" placeholder="Ваш телефон" name="telephone" type="tel" required>
               <button class="btn questions__btn btn4">Получить контакты действующих партнеров</button>
             </form>
             <p class="smalltext questions__smalltext">*Нажимая на кнопку, вы даете согласие на обработку персональных данных</p>
+          </div>
+          <div class="questions__succes succes4">
+            <h2 class="form__title">СПАСИБО</h2>
+            <p class="form__succes-text">Специалист свяжется с вами в рабочее время</p>
           </div>
           <div class="questions__item">
             <p class="text questions__text">Связаться с менеджером сопровождения</p><a class="questions__tel" href="tel:+7(913)205-06-13">+7 (913) 205-06-13</a>

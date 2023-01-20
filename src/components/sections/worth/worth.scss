@@ -47,11 +47,8 @@
       position: relative;
       top: 53px;
       & > .worth__item-block {
-        display: flex;
-        align-items: center;
         height: 100%;
         left: -560px;
-        position: relative;
         background: url("../images/bg-2.png") no-repeat;
         position: relative;
         @media (max-width: 1140px) {
