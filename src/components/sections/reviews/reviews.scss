@@ -2,18 +2,33 @@
   padding: 109px 0 123px 0;
   background: #e2e2e2;
   overflow: hidden;
+  @media (max-width: ($md4 + px)) {
+    padding: 27px 0 68px 0;
+  }
   &__title {
     margin-bottom: 104px;
     text-align: center;
     span {
       color: $mainColor;
     }
+    @media (max-width: ($md4 + px)) {
+      margin-bottom: 47px;
+    }
   }
   &__block {
     display: flex;
     justify-content: space-between;
+    position: relative;
     @media (max-width: ($md2 + px)) {
       flex-direction: column;
+    }
+    @media (max-width: ($md4 + px)) {
+      &:before {
+        content: url("../images/bg-9.png");
+        position: absolute;
+        right: 0;
+        top: -20px;
+      }
     }
     &-title {
       font-weight: 500;
@@ -22,21 +37,31 @@
       color: $secondaryColor;
       font-family: "Ubuntu", sans-serif;
       margin-bottom: 20px;
+      @media (max-width: ($md4 + px)) {
+        font-size: 18px;
+      }
     }
     &-video {
       width: 35%;
       position: relative;
-      height: 479px;
+      z-index: 2;
       @media (max-width: ($md2 + px)) {
         width: 100%;
       }
       iframe {
-        width: 140%;
-        height: 100%;
-        position: absolute;
-        z-index: 2;
+        width: 100%;
+        height: 479px;
         @media (max-width: ($md2 + px)) {
           width: 100%;
+        }
+        @media (max-width: ($md4 + px)) {
+          height: 188px;
+        }
+      }
+      .slick-list {
+        height: 479px;
+        @media (max-width: ($md4 + px)) {
+          height: 188px;
         }
       }
     }
@@ -67,12 +92,18 @@
         transform: none;
         top: -30px;
       }
+      @media (max-width: ($md4 + px)) {
+        min-height: auto;
+      }
     }
     &-text {
       font-size: 18px;
       line-height: calc(26 / 18 * 100%);
       letter-spacing: 0.065em;
       color: $secondaryColor;
+      @media (max-width: ($md4 + px)) {
+        font-size: 12px;
+      }
     }
     &-flex {
       margin-bottom: 22px;
@@ -80,19 +111,32 @@
     &-rating {
       display: flex;
       align-items: center;
-      span {
-        display: inline-block;
-        &:before {
-          color: $mainColor;
-          font-size: 20px;
-        }
-        &:not(:last-child) {
-          margin-right: 6px;
+      margin-bottom: 22px;
+      @media (max-width: ($md4 + px)) {
+        flex-direction: column;
+        align-items: baseline;
+      }
+      &-spn {
+        display: flex;
+        align-items: center;
+        span {
+          display: inline-block;
+          &:before {
+            color: $mainColor;
+            font-size: 20px;
+          }
+          &:not(:last-child) {
+            margin-right: 6px;
+          }
         }
       }
       p {
         margin-left: 30px;
         color: #565654;
+        @media (max-width: ($md4 + px)) {
+          margin-left: 0;
+          margin-top: 10px;
+        }
       }
     }
     &-spn {
