@@ -1,5 +1,3 @@
-import "./header/header";
-import "./footer/footer";
 import "./sections/reviews/reviews";
 import "./sections/popup/popup";
 import "./sections/popup-2/popup-2";

@@ -42,14 +42,14 @@
       }
     }
     &-video {
-      width: 35%;
+      width: 50%;
       position: relative;
       z-index: 2;
       @media (max-width: ($md2 + px)) {
         width: 100%;
       }
       iframe {
-        width: 600px;
+        width: 710px;
         height: 479px;
         @media (max-width: ($md2 + px)) {
           width: 100%;
@@ -71,6 +71,7 @@
       transform: skewX(-30deg);
       box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
       width: 65%;
+      margin-left: -200px;
       display: flex;
       align-items: center;
       justify-content: center;
