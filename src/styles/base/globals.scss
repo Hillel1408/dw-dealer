@@ -1,6 +1,9 @@
 body.lock {
   overflow: hidden !important;
 }
+main {
+  overflow: hidden;
+}
 .container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;

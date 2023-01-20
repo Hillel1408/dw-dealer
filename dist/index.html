@@ -8,6 +8,7 @@
     <link href="/assets/styles/main.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
   </head>
   <body>
     <main>
@@ -24,7 +25,7 @@
             </ul>
           </nav>
           <div class="header__block"><a class="header__tel" href="tel:+7(913)205-06-13">+7(913)205-06-13</a>
-            <button class="btn header__btn">Заказать звонок</button>
+            <button class="btn header__btn popup-link" href="call" data-id="1">Заказать звонок</button>
           </div>
         </div>
       </header>
@@ -39,7 +40,7 @@
             <li class="intro__list-item">
                - Работает <span>более 80 партнеров </span>по России и СНГ</li>
           </ul>
-          <button class="btn intro__btn">Получить презентацию + бизнес-план</button>
+          <button class="btn intro__btn popup-link" href="call2">Получить презентацию + бизнес-план</button>
         </div>
       </section>
       <section class="patent">
@@ -104,7 +105,7 @@
             </div>
           </div>
           <p class="text profit__grid-text"><b>Узнайте выручку и другие финансовые показатели действующих партнеров</b></p>
-          <button class="btn">Получить информацию</button>
+          <button class="btn popup-link" href="call" data-id="2">Получить информацию</button>
         </div>
       </section>
       <setion class="worth">
@@ -174,7 +175,7 @@
                 <li class="text investment__list-item">- продукция на стоимость пакета</li>
                 <li class="text investment__list-item">- скидка на продукцию до 45%</li>
               </ul>
-              <button class="btn">Выбрать пакет</button>
+              <button class="btn popup-link" href="call" data-id="4">Выбрать пакет</button>
             </div>
             <div class="investment__item">
               <h2 class="title investment__item-title">
@@ -185,7 +186,7 @@
                 <li class="text investment__list-item">- печатные рекламные материалы (БЕСПЛАТНО)</li>
                 <li class="text investment__list-item">- демонстрационный стенд с образцами</li>
               </ul>
-              <button class="btn">Выбрать пакет</button>
+              <button class="btn popup-link" href="call" data-id="4">Выбрать пакет</button>
             </div>
             <div class="investment__item">
               <h2 class="title investment__item-title">
@@ -198,7 +199,7 @@
                 <li class="text investment__list-item">- 2 дня обучения в центральном офисе</li>
                 <li class="text investment__list-item">- бонус на размещение онлайн рекламы</li>
               </ul>
-              <button class="btn">Выбрать пакет</button>
+              <button class="btn popup-link" href="call" data-id="4">Выбрать пакет</button>
             </div>
           </div>
           <h2 class="title investment__subtitle">Помимо приобретения пакета, вам необходимы</h2>
@@ -208,7 +209,7 @@
             <li class="investment__sublist-item">Организация рабочих мест</li>
             <li class="investment__sublist-item">Рекламный бюджет на 1-2 месяца</li>
           </ul>
-          <button class="btn">Скачать дилерский договор</button>
+          <button class="btn popup-link" href="call" data-id="3">Скачать дилерский договор</button>
         </div>
       </section>
       <section class="reviews">
@@ -216,14 +217,16 @@
           <h2 class="title reviews__title">Выбор <span>партнеров</span></h2>
           <div class="reviews__block">
             <div class="reviews__block-video">
-              <iframe class="video__youtube" src="https://www.youtube.com/embed/5tiNewD5d20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="reviews__block-slide"><iframe src="https://www.youtube.com/embed/HM5Sb0yBEU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+              <div class="reviews__block-slide"><iframe src="https://www.youtube.com/embed/HM5Sb0yBEU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             </div>
             <div class="reviews__block-content">
               <div class="reviews__slider">
                 <div class="reviews__slide">
                   <h3 class="reviews__block-title">Отзыв от официального дилера DAEWOO ENERTEC в Иркутске.</h3>
                   <div class="reviews__block-flex">
-                    <div class="reviews__block-rating"><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3 reviews__block-spn"></span>
+                    <div class="reviews__block-rating">
+                      <div class="reviews__block-rating-spn"><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3 reviews__block-spn"></span></div>
                       <p>Ольга Середницкая</p>
                     </div>
                     <p class="reviews__block-text">Ольга Середницкая расскажет о том, как приняла решение стать дилером, о продаже и спросе на уникальный электро-водяной теплый пол XL PIPE в Иркутске. Поделится инструментами, которые ей дает центральный офис для развития, а также подробно остановится на системе поддержки отдела сопровождения дилерства по теплым полам.</p>
@@ -232,7 +235,8 @@
                 <div class="reviews__slide">
                   <h3 class="reviews__block-title">Отзыв от официального дилера DAEWOO ENERTEC в Иркутске.</h3>
                   <div class="reviews__block-flex">
-                    <div class="reviews__block-rating"><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3 reviews__block-spn"></span>
+                    <div class="reviews__block-rating">
+                      <div class="reviews__block-rating-spn"><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3"></span><span class="icon-3 reviews__block-spn"></span></div>
                       <p>Ольга Середницкая</p>
                     </div>
                     <p class="reviews__block-text">Ольга Середницкая расскажет о том, как приняла решение стать дилером, о продаже и спросе на уникальный электро-водяной теплый пол XL PIPE в Иркутске. Поделится инструментами, которые ей дает центральный офис для развития, а также подробно остановится на системе поддержки отдела сопровождения дилерства по теплым полам.</p>
@@ -251,9 +255,9 @@
           </div>
           <div class="questions__item">
             <form action="#">
-              <input class="questions__input" placeholder="Ваше имя" name="name" required>
-              <input class="questions__input" placeholder="Ваш телефон" name="telephone" type="tel" required>
-              <button class="btn questions__btn">Получить контакты действующих партнеров</button>
+              <input class="questions__input name3" placeholder="Ваше имя" name="name" required>
+              <input class="questions__input phone3" placeholder="Ваш телефон" name="telephone" type="tel" required>
+              <button class="btn questions__btn btn4">Получить контакты действующих партнеров</button>
             </form>
             <p class="smalltext questions__smalltext">*Нажимая на кнопку, вы даете согласие на обработку персональных данных</p>
           </div>
@@ -262,39 +266,47 @@
           </div>
         </div>
       </section>
-      <div class="popup">
+      <div class="popup" id="call2">
         <div class="popup__body">
-          <div class="popup__content"><span class="popup__close"></span>
-            <div class="popup__flex">
+          <div class="popup__content"><span class="popup__close close-popup"></span>
+            <div class="popup__flex popup2">
               <div class="form__image"><img src="./assets/images/5.png" alt="Картинка"></div>
               <div class="form__content">
                 <h2 class="form__title">Получите презентацию и бизнес план</h2>
                 <p class="text form__text">заполните форму, и мы отправим вам информацию</p>
                 <form class="form" action="#">
-                  <input class="form__input" placeholder="Имя" name="name" required>
-                  <input class="form__input" placeholder="Ваш телефон" name="telephone" type="tel" required>
-                  <button class="btn form__btn">Отправить заявку</button>
+                  <input class="form__input name" placeholder="Имя" name="name" required>
+                  <input class="form__input phone" placeholder="Ваш телефон" name="telephone" type="tel" required>
+                  <button class="btn form__btn btn3">Отправить заявку</button>
                 </form>
                 <p class="smalltext form__smalltext">Отправляя заявку, вы соглашаетесь на обработку персональных данных в соответствии с <a href="/">политикой конфиденциальности</a></p>
               </div>
             </div>
+            <div class="form__succes succes2">
+              <h2 class="form__title">СПАСИБО</h2>
+              <p class="form__succes-text">Специалист свяжется с вами в рабочее время</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="popup">
+      <div class="popup" id="call">
         <div class="popup__body">
-          <div class="popup__content popup-2__content"><span class="popup__close"></span>
-            <div class="popup__flex">
+          <div class="popup__content popup-2__content"><span class="popup__close close-popup"></span>
+            <div class="popup__flex popup3">
               <div class="form__content form-2__content">
                 <h2 class="form__title">Заполните форму</h2>
-                <p class="text form__text">и наш менеджер перезвонит вам в рабочее время</p>
+                <p class="text form__text modal-text">и наш менеджер перезвонит вам в рабочее время</p>
                 <form class="form" action="#">
-                  <input class="form__input" placeholder="Имя" name="name" required>
-                  <input class="form__input" placeholder="Ваш телефон" name="telephone" type="tel" required>
-                  <button class="btn form__btn">Отправить заявку</button>
+                  <input class="form__input name2" placeholder="Имя" name="name" required>
+                  <input class="form__input phone2" placeholder="Ваш телефон" name="telephone" type="tel" required>
+                  <button class="btn form__btn btn2">Отправить заявку</button>
                 </form>
                 <p class="smalltext form__smalltext">Отправляя заявку, вы соглашаетесь на обработку персональных данных в соответствии с <a href="/">политикой конфиденциальности</a></p>
               </div>
+            </div>
+            <div class="form__succes succes3">
+              <h2 class="form__title">СПАСИБО</h2>
+              <p class="form__succes-text">Специалист свяжется с вами в рабочее время</p>
             </div>
           </div>
         </div>

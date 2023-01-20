@@ -45,6 +45,7 @@
     display: flex;
     padding: 62px 51px;
     gap: calc(80 / 1022 * 100%);
+    min-height: 542.31px;
   }
   &__close {
     position: absolute;
@@ -114,15 +115,15 @@
     line-height: 27px;
     color: white;
     margin-bottom: 20px;
-    &:invalid {
-      border: 1px solid $mainColor;
-    }
   }
   &__btn {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 40px;
+    pointer-events: none;
+    cursor: default;
+    background-color: lighten($mainColor, 20%);
   }
   &__smalltext {
     font-size: 14px;
@@ -131,4 +132,26 @@
       color: $mainColor;
     }
   }
+  &__succes {
+    background-image: url("../images/bg-8.png");
+    border-radius: 30px;
+    background-size: cover;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 62px 51px;
+    min-height: 542.31px;
+    text-align: center;
+    &-text {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: calc(37 / 30 * 100%);
+      color: white;
+    }
+  }
+}
+.btn-active {
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: $mainColor;
 }

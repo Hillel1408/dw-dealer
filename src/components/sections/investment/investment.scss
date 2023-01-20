@@ -1,6 +1,9 @@
 .investment {
   padding: 184px 0 136px 0;
   background-color: #f4f4f4;
+  @media (max-width: ($md4 + px)) {
+    padding: 124px 0 76px 0;
+  }
   &__title {
     margin-bottom: 60px;
     span {
