@@ -40,12 +40,15 @@
   &__item {
     &:first-child {
       box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
-      width: 50%;
+      width: 73%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      overflow: hidden;
+      transform: skewX(-25deg) translateX(-190px);
       img {
         margin-right: 100px;
+        transform: skewX(25deg);
       }
       @media (max-width: 928px) {
         display: none;
