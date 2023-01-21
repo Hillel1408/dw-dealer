@@ -3,11 +3,12 @@ export default func = (phoneInput, nameInput, btn, popup, succes) => {
     mask: "+{7}(000)000-00-00",
   });
 
+  nameInput.addEventListener("input", phoneInputHandler);
   phoneInput.addEventListener("input", phoneInputHandler);
   btn.addEventListener("click", btnHandler);
 
   function phoneInputHandler() {
-    if (phoneMask.masked.isComplete) {
+    if (phoneMask.masked.isComplete && nameInput.value) {
       btn.classList.add("btn-active");
     } else {
       btn.classList.remove("btn-active");
