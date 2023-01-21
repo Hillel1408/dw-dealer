@@ -100,18 +100,17 @@
   }
   &__list {
     position: absolute;
-    top: 60px;
+    top: 0;
+    bottom: 0;
     z-index: 2;
     left: -350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @media (max-width: 928px) {
       padding: 0 20px;
-      top: 89px;
-    }
-    @media (max-width: ($md4 + px)) {
-      top: 57px;
     }
     @media (max-width: ($md5 + px)) {
-      top: 10px;
       transform: skewX(25deg);
     }
     &-item {
