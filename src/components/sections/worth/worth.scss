@@ -1,4 +1,15 @@
 .worth {
+  &__title {
+    text-align: center;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    span {
+      color: $mainColor;
+    }
+  }
   &__container {
     display: flex;
     background-color: #f4f4f4;
@@ -7,13 +18,13 @@
       &:before {
         content: url("../images/bg-6.png");
         position: absolute;
-        top: 10px;
+        top: 20px;
       }
       &:after {
         content: url("../images/bg-7.png");
         position: absolute;
         right: 0;
-        top: 50px;
+        top: 80px;
       }
     }
   }
@@ -40,14 +51,22 @@
         display: none;
       }
     }
+    &-wrapper {
+      width: 50%;
+      position: relative;
+      @media (max-width: 928px) {
+        width: 100%;
+      }
+    }
     &:last-child {
       background: #252525;
-      width: 50%;
+      width: 100%;
       height: 734px;
       position: relative;
-      top: 53px;
+      top: 60px;
       & > .worth__item-block {
         height: 100%;
+        width: 1528px;
         left: -560px;
         background: url("../images/bg-2.png") no-repeat;
         position: relative;
@@ -62,7 +81,7 @@
         height: 275px !important;
       }
       @media (max-width: ($md5 + px)) {
-        height: 237px !important;
+        height: 257px !important;
         transform: skewX(-25deg);
       }
       &:after {
@@ -75,7 +94,6 @@
         }
       }
       @media (max-width: 928px) {
-        width: 100%;
         height: 575px;
       }
     }
@@ -151,6 +169,7 @@
         }
         @media (max-width: ($md5 + px)) {
           margin-left: 20px;
+          max-width: 240px;
         }
       }
       &:last-child {
@@ -168,6 +187,10 @@
         }
         @media (max-width: 928px) {
           margin: 0 auto;
+        }
+        @media (max-width: ($md5 + px)) {
+          margin: 0;
+          max-width: 220px;
         }
       }
     }

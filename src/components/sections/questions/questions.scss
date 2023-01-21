@@ -1,6 +1,9 @@
 .questions {
   padding: 109px 0 74px 0;
   background-color: #f4f4f4;
+  @media (max-width: ($md5 + px)) {
+    padding: 62px 0 74px 0;
+  }
   &__container {
     display: grid;
     gap: calc(60 / 1420 * 100%);
@@ -39,6 +42,9 @@
     line-height: calc(50 / 40 * 100%);
     color: $secondaryColor;
     margin-bottom: 10px;
+    @media (max-width: ($md5 + px)) {
+      font-size: 20px;
+    }
   }
   &__text {
     color: rgba(37, 37, 37, 0.6);
