@@ -1,3 +1,10 @@
+-
+    var socialLinks = [
+        {textLink: 'Инстаграм', href: '/', icon: 'icon-4'},
+        {textLink: 'Вконтакте', href: '/', icon: 'icon-5'},
+        {textLink: 'youtube', href: '/', icon: 'icon-6'},
+    ]
+
 footer.footer
     .container.footer__container
         .footer__item
@@ -13,12 +20,9 @@ footer.footer
         .footer__item
             h3.footer__title.footer__link(style={'margin-bottom': '16px'}) Социальные сети
             ul.footer__list
-                li.footer__list-item
-                    a.footer__list-link(class='icon-4' href="/") Инстаграм
-                li.footer__list-item
-                    a.footer__list-link(class='icon-5' href="/") Вконтакте
-                li.footer__list-item
-                    a.footer__list-link(class='icon-6' href="/") youtube
+                each val in socialLinks
+                    li.footer__list-item
+                        a.footer__list-link(class= val.icon href= val.href)= val.textLink
             p.footer__text.footer__insta *Организация, запрещенная на территории РФ
             h3.footer__title.footer__link(style={'margin-bottom': '23px'}) Мессенджеры
             a.footer__list-link(class='icon-7' href="/") whatsapp
