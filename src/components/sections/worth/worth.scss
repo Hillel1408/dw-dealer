@@ -9,6 +9,12 @@
     span {
       color: $mainColor;
     }
+    @media (max-width: 1370px) {
+      top: -40px;
+    }
+    @media (max-width: 928px) {
+      top: -20px;
+    }
   }
   &__container {
     display: flex;

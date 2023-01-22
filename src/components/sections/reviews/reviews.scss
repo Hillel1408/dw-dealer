@@ -140,6 +140,15 @@
           margin-top: 10px;
         }
       }
+      b {
+        color: $mainColor;
+        font-size: 18px;
+        line-height: 22px;
+        margin-left: 14px;
+        @media (max-width: ($md4 + px)) {
+          margin-left: 0;
+        }
+      }
     }
     &-spn {
       width: 11px;
